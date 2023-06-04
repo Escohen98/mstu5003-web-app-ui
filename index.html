@@ -1,1 +1,70 @@
-<!-- Here is our HTML File -->
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Geography</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+  </head>
+
+<body>
+  <header>
+    <h1>Learn your Geography!</h1>
+    <div class="navbar">
+      <a href="#">About Us</a>
+      <a href="#">Learning Resources</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </header>
+  <main>
+    <section class="left-nav">
+      <a href="#">Learning Mode</a>
+      <a href="#">Quiz Mode</a>
+    </section>
+    <section class="info-card">
+      <div class="frame">
+        <div class="state">
+          <img hidden id="state-level" class="state-img" src=#
+          <img hidden id="district-level" class="state-img" src=#>
+          <img id="city-level" class="state-img" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.texas-map.org%2Ftexas-map.jpg&f=1&nofb=1&ipt=ddf90b4218d4b58e9ea431d70a57bb1bba550f667a594ae1627d82c465bfece1&ipo=images">
+        </div>
+        <div class="title">
+          <div class="flag-container round-border">
+            <img id="flag" src="http://www.all-flags-world.com/usa-states/Texas/Texas-Flag-US-State-Metal-XL.jpg">
+          </div>
+          <h1 class="state-name">Texas</h1>
+        </div>
+        <div class="info-block">
+          <p>Texas is a state in the South Central region of the United States.
+            At 268,596 square miles, and with more than 30 million residents
+            in 2023, it is the second-largest U.S. state by both area and
+            population.</p>
+          <ul>
+            <li><span class="topic">Governor:</span> Greg Abbot</li>
+            <li><span class="topic">Capital:</span> Austin</li>
+            <li><span class="topic">Population:</span> 28,862,581</li>
+            <li><span class="topic">State flower:</span> Bluebonnet</li>
+            <li><span class="topic">State Bird:</span> Northern Mockingbird</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- below are the code for the scoreboard
+          needs to be the bottom section-->
+    <section hidden class="scoreboard">
+    <h2>Scoreboard</h2>
+      <div class="score">
+      <span>Points</span>
+      <span id="scoreuget">0/50</span>
+      </div>
+      <div class="buttons">
+        <button type="button" class="btn btn-outline-success" class="hint">Hint</button>
+        <button type="button" class="btn btn-outline-primary" class="skip">Skip</button>
+        <button type="button" class="btn btn-outline-danger" class="retry">Retry</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

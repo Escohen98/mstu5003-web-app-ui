@@ -1,1 +1,184 @@
 /* Here is the CSS */
+body {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/5fa09a90d6f28c124750e0c7/1647749007359-83SVIK074EBBBRS4T7KJ/blue-website-background.png?format=2500w");
+  background-size: cover;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+}
+
+header h1 {
+  margin-left: 20px;
+}
+
+.navbar {
+
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+
+}
+
+/* Why is the position frozen?*/
+.navbar a {
+  position: relative;
+  margin: 0 20px;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+  font-weight:bold;
+  font-family:Helvetica;
+}
+
+.navbar a:hover {
+  color: #3355FF;
+}
+
+
+.left-nav {
+  margin-top: 60px;
+  margin-left:20px;
+  padding: 10px;
+}
+
+.left-nav a {
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight:bold;
+  font-family:Helvetica;
+
+}
+
+.left-nav a:hover {
+  color:#3355FF;
+ text-decoration: underline;
+  text-decoration-color: #001166;
+
+}
+
+/* below are the code for the scoreboard */
+.scoreboard {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: #d3d3d3;
+  padding: 10px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.score {
+  margin-bottom: 10px;
+}
+
+.score span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.score span:last-child {
+  font-weight: bold;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.buttons button {
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.info-card {
+  width: 300px;
+  height: 500px;
+  margin: 43px auto;
+  background-image: linear-gradient(0deg, red, white, blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 20px;
+  background-color: rgba(20,16,17,255);
+  position: relative;
+}
+
+.state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: 30%;
+  overflow: hidden;
+}
+
+
+.state-img {
+  max-width: 50%;
+  max-height: 100%;
+  align-content: center;
+}
+
+.info-block {
+  border-color: black;
+  overflow: hidden scroll;
+}
+
+.info-block > p, .info-block > li {
+  padding-left: 10px;
+  padding-bottom: 30px;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.round-border {
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50%;
+}
+
+.flag-container {
+  height: 62.5px;
+  width: 62.5px;
+  background-color: white;
+  text-align: center;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.topic .state-name{
+  font-weight: bold;
+}
+
+.state-name {
+  font-size: 50px;
+  margin-left: 30px;
+}
+
+.flag-container {
+  margin-right: 30px;
+}
+
+.divider {
+  border-bottom: 10px solid black;
+  padding: 1% 1%;
+}
+
+#flag {
+  max-height: 100%;
+  max-width: 100%;
+  margin-top: 6px;
+  margin-right: 5px;
+}
