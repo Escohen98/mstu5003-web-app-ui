@@ -15,6 +15,13 @@ header h1 {
   margin-left: 20px;
 }
 
+main {
+  display: flex;
+  align-items: column; /* Align items to the bottom */
+  justify-content: left; /* Justify content to the left */
+  height: 100vh; /* Adjust the height as needed */
+}
+
 .navbar {
 
   justify-content: flex-end;
@@ -64,10 +71,11 @@ header h1 {
 
 /* below are the code for the scoreboard */
 .scoreboard {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
+  position: relative;
+  width: 300px;
+  height: 180px;
+  top: 200px;
+  left: 750px;
   background-color: #d3d3d3;
   padding: 10px;
   text-align: center;
@@ -97,17 +105,23 @@ header h1 {
   border-radius: 10px;
 }
 
+.map {
+  max-width: 80%;
+  height: auto;
+}
+
 .info-card {
   width: 300px;
-  height: 500px;
-  margin: 43px auto;
+  height: 550px;
+  margin: 0 20px 20px 0; /* Adjust margins as needed */
   background-image: linear-gradient(0deg, red, white, blue);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 20px;
-  background-color: rgba(20,16,17,255);
+  background-color: rgba(20, 16, 17, 255);
+  border: 2px outset #3355FF;
   position: relative;
+  margin-top: 15%
 }
 
 .state {
@@ -117,8 +131,9 @@ header h1 {
   max-width: 100%;
   max-height: 30%;
   overflow: hidden;
+/*  border: 2px solid black;*/
+  background-color: white;
 }
-
 
 .state-img {
   max-width: 50%;
@@ -127,58 +142,106 @@ header h1 {
 }
 
 .info-block {
-  border-color: black;
-  overflow: hidden scroll;
+  overflow: hidden;
 }
 
-.info-block > p, .info-block > li {
+.info-block > p,
+.info-block > li {
   padding-left: 10px;
+  padding-right: 10px;
   padding-bottom: 30px;
+  overflow-wrap: break-word; /* Add this property */
+}
+
+.info-block ul {
+  padding-left: 20px;
 }
 
 .title {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  border-bottom: 1px double black;
 }
 
 .round-border {
-    border-color: black;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 50%;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;
 }
 
+/* Here is the updated CSS */
 .flag-container {
   height: 62.5px;
   width: 62.5px;
   background-color: white;
   text-align: center;
   padding: 5px;
+  margin-top: 5px;
   overflow: hidden;
+  margin-right: 30px;
+  border: 1px solid black; /* Add this line */
 }
 
-.topic .state-name{
-  font-weight: bold;
+.flag {
+  max-height: 100%;
+  width: auto;
+  margin-top: 6px;
+  margin-right: 20px;
+  border: 1px solid black; /* Add this line */
 }
 
 .state-name {
   font-size: 50px;
-  margin-left: 30px;
-}
-
-.flag-container {
-  margin-right: 30px;
+  color: white;
 }
 
 .divider {
-  border-bottom: 10px solid black;
+  border-bottom: 2px solid black;
   padding: 1% 1%;
 }
 
-#flag {
-  max-height: 100%;
-  max-width: 100%;
-  margin-top: 6px;
-  margin-right: 5px;
+.info-card > .buttons > .btn {
+  background-color: white;
+}
+
+path {
+    stroke: white;
+    fill:paleturquoise !important;
+
+    transition: fill .4s ease;
+    transform-origin: center center;
+}
+
+path:hover {
+    fill: orange !important;
+    cursor: pointer;
+    transform: scale(1.005, 1.005);
+}
+
+#us-map {
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 100%;
+    height: 100%;
+    -moz-transform: scale(.5);
+}
+
+#details-box {
+    box-shadow: 0px 7px 40px rgba(0, 0, 0, 0.7);
+    opacity: 0%;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 20px;
+    position: fixed;
+    color: white;
+    font-family: "Poppins";
+    background-color: black;
+    width: fit-content;
+    transform: translateX(-50%);
+    transition: opacity .4s ease;
+    z-index: 1;
 }
